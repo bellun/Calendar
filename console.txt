@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCmf_bmpg4Zq12jgH8VlylxIjFAdinFa6w",
+    authDomain: "vue-calendar-4ae09.firebaseapp.com",
+    databaseURL: "https://vue-calendar-4ae09.firebaseio.com",
+    projectId: "vue-calendar-4ae09",
+    storageBucket: "vue-calendar-4ae09.appspot.com",
+    messagingSenderId: "704670923903",
+    appId: "1:704670923903:web:d1c636fc6999bf8050d34a",
+    measurementId: "G-NSGL1M9EFM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
