@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "vue-textarea-autosize": "^1.1.1"
+  },
+  "name": "calendar",
+  "description": "Calendar With Vue, Vuetify & Firebase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellun/Calendar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bellun/Calendar/issues"
+  },
+  "homepage": "https://github.com/bellun/Calendar#readme"
+}

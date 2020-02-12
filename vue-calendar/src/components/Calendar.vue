@@ -102,8 +102,44 @@
   </v-row>
 </template>
 
+
 <script>
+import { db } from '@/main'
 export default {
-    
-}
+   data:()=> ({
+       today: new Date().toISOString().substr(0,10),
+       focus: new Date().toISOString().substr(0,10),
+       type:"month",
+       typeToLavel:{
+           month: "Month",
+           week: "Week",
+           day: "Day",
+           "4day": "4 Days"
+       },
+       name: null,
+       details:null,
+       color: "#1976D2",
+       currentlyEditing:null,
+       selectedEvent:{},
+       selectedElement: null,
+       selectOpen:false,
+       events:[],
+       dialog:false
+   }),
+   mounted(){
+       this.getEvents();
+   },
+   methods:{
+       async getEvents(){
+           let snapshot =await db.collection('calEvent').get();
+           let events= [];
+           snapshot.array.forEach(doc => {
+               let appData = doc.data();
+               appData.id= doc.id;
+               events.push(appData);
+           });
+           this.events= events;
+       }
+   }
+};
 </script>
