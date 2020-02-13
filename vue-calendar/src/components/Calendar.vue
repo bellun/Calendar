@@ -12,7 +12,7 @@
           <v-btn fab text small @click="prev">
             <v-icon small>mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn fab text small @click="next" class = "mr-4">
+          <v-btn fab text small @click="next">
             <v-icon small>mdi-chevron-right</v-icon>
           </v-btn>
           <v-toolbar-title>{{ title }}</v-toolbar-title>
@@ -95,6 +95,7 @@
   v-model="selectedOpen"
   :close-on-content-click="false"
   :activator="selectedElement"
+  full-width
   offset-x
   >
   <v-card color="grey lighten-4" :width="350" flat>
@@ -139,11 +140,8 @@
 </v-row>
 </template>
 
-
-
-
 <script>
-import { db } from '@/main';
+import { db } from '@/main'
 export default {
   data: () => ({
     today: new Date().toISOString().substr(0, 10),
@@ -164,12 +162,12 @@ export default {
     selectedEvent: {},
     selectedElement: null,
     selectedOpen: false,
-    event: [],
+    events: [],
     dialog: false,
     dialogDate: false
   }),
   mounted () {
-    this.getEvents();
+    this.getEvents()
   },
   computed: {
     title () {
