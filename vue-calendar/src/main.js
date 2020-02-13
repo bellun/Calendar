@@ -1,10 +1,10 @@
+import Vue from 'vue'
+import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import firebase from "firebase";
-import App from "./App.vue";
-import Vue from 'vue'
-import TextareaAutosize from 'vue-textarea-autosize'
+import VueTextareaAutosize from 'vue-textarea-autosize'
 
-Vue.use(Vue.vueTextAreaAutosize)
+Vue.use(VueTextareaAutosize)
 
 Vue.config.productionTip = false
 
